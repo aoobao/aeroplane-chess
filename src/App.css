@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+html {
+  font-size: 62.5%;
 }
 
-.App-logo {
-  height: 40vmin;
+html body #root .App {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: 微软雅黑;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.pointer-none {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pointer {
+  pointer-events: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* 滚动条 */
+::-webkit-scrollbar-thumb:horizontal {
+  /*水平滚动条的样式*/
+  width: 4px;
+  background-color: #cccccc;
+  border-radius: 6px;
 }
-
-.App-link {
-  color: #61dafb;
+::-webkit-scrollbar-track-piece {
+  background-color: #fff; /*滚动条的背景颜色*/
+  border-radius: 0; /*滚动条的圆角宽度*/
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-scrollbar {
+  width: 10px; /*滚动条的宽度*/
+  height: 8px; /*滚动条的高度*/
+}
+::-webkit-scrollbar-thumb:vertical {
+  /*垂直滚动条的样式*/
+  height: 50px;
+  background-color: #999;
+  border-radius: 4px;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+  border: 2px solid #fff;
+}
+::-webkit-scrollbar-thumb:hover {
+  /*滚动条的hover样式*/
+  height: 50px;
+  background-color: #9f9f9f;
+  border-radius: 4px;
 }
